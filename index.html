@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Artesano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Oxanium:wght@200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <script src="https://kit.fontawesome.com/6f924c7ad0.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <!-- boton cerrar  -->
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav class="sidebar" id="sidebar">
+        <div class="title"><img src="img/logo.webp" alt="Logo Artesano"></div>
+        <ul class="list-items">
+          <li><a href="#inicio"><i class="fas fa-home"></i>Inicio</a></li>
+          <li><a href="#conocenos"><i class="fas fa-users"></i>Conocenos</a></li>
+          <li><a href="#carta"><i class="fas fa-utensils"></i>Nuestra carta</a></li>
+          <li><a href="#3"><i class="fas fa-map-marker-alt"></i>Nuestro Pueblo</a></li>
+          <li><a href="#4"><i class="fas fa-sticky-note"></i>Notas</a></li>
+          <li><a href="#5"><i class="fas fa-envelope"></i>Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="banner" id="inicio">
+      <div class="rombo">
+        <img src="img/banner-rombo.webp" alt="">
+      </div>
+      <div class="info">
+        <h1><i class="fa-solid fa-burger fa-fade fa-xs"></i> Arte-sano Resto Bar <i class="fa-solid fa-pizza-slice fa-fade fa-xs"></i></h1>
+        <p> Sabores auténticos en un rincón lleno de historia. Pizzas artesanales, milanesas irresistibles y la
+          mejor cerveza tirada te esperan frente a la plaza. ¡Ven a disfrutar!</p>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="main">
+
+    <section class="conocenos" id="conocenos">
+      <h2>Nuestra historia</h2>
+      <div class="container-section">
+        <div class="image"> 
+          <img src="img/Conocenos.webp" alt="">
+        </div>
+        <div class="texto">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro consequatur enim
+            error
+            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
+            expedita
+            nam dolorem deleniti? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro
+            consequatur enim
+            error
+            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
+            expedita
+            nam dolorem deleniti?
+          </p>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro consequatur enim
+            error
+            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
+            expedita
+            nam dolorem deleniti? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro
+            consequatur enim
+            error
+            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
+            expedita
+            nam dolorem deleniti?
+          </p>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium odio enim itaque temporibus
+            asperiores, eius consequatur! Rerum sequi, beatae sunt sint molestias illum id tempore est quos
+            reprehenderit nam.
+          </p>
+
+        </div>
+      </div>
+    </section>
+    <section id="carta" class="carta">
+      <h2>Nuestra Carta</h2>
+      <img src="img/carta.png" alt="">
+      <div class="contenedor slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list">
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+          <img class="image-item" src="img/milanesa.jpg" alt="img-1" />
+
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </section>
+    <section class="pueblo" id="3">
+      <h2>Nuestro Pueblo</h2>
+      <div class="contenedor" >
+      </div>
+    </section>
+    <section id="4">
+      <h2>Notas</h2>
+      <div class="contenedor" >
+        <iframe width="auto" height="300" src="https://www.youtube.com/embed/9uFYlD7kie8?si=rOBve3LbjW6mt4F9&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="auto" height="300" src="https://www.youtube.com/embed/n7BVayu-rRg?si=fI6i0lyRcdpwbQM2&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="formulario" id="5">
+      <h2>Haga su Pedido</h2>
+      <div class="contenedor">
+        <form action="#" method="post">
+          <div class="container-form">
+            <div class="nombre-apellido">
+              <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+              </div>
+              <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+              </div>
+            </div>
+            <div class="correo-tel">
+              <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su telefono">
+              </div>
+              <div class="campo">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+              </div>
+            </div>
+  
+            <div class="campo">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+          </div>
+  
+          <button class="btn-contacto" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    <section class="formulario">
+      <h3>Donde estamos</h3>
+      <div class="contenedor">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6375425688298!2d-59.90992972353066!3d-34.61332585800684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b955b1e6837001%3A0x3df6a1f0bcaf766f!2sPizzeria%20ARTE%20-%20SANO%20Beer%20%26%20Co!5e0!3m2!1ses-419!2sar!4v1727707614217!5m2!1ses-419!2sar" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer id="contact" class="contacto">
+    <div class="perfil">
+      <img src="img/perfil.webp" alt="foto de perfil de Ricardo Rodolfo García">
+    </div>
+    <div class="datos">
+      <h4>Datos</h4>
+      <p>Ricardo Rodolfo García</p>
+      <p>36 años</p>
+      <p>Ricardo.garcia@davinci.edu.ar</p>
+      <p>Copyright 2024 - Diseño y Programación Web</p>
+    </div>
+    <div class="redes-sociales">
+      <h4>Redes Sociales</h4>
+      <ul>
+        <li>
+         
+          <a href="https://www.facebook.com/ricardoGarcia93/" target="_blank"> <i class="fa-brands fa-facebook"></i> Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ricardogarci4" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </li>
+        <li>
+          
+          <a href="https://www.linkedin.com/in/ricardo-garci4/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </li>
+      </ul>
+    </div>    
+  </footer>
+</body>
+
+</html>
