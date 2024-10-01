@@ -20,7 +20,7 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  /* outline: solid 1px red; */
+  outline: solid 1px red;
 }
  /* Imágenes y elementos visuales ajustados al 100% de su contenedor */
 img,
@@ -690,6 +690,12 @@ h2{
      
       grid-area: 2 / 1 / 3 / 2
     }
+    .contacto {  
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
 }
 /*-----------------------------------------------------
            Estilos para pantallas móviles
@@ -751,5 +757,11 @@ h2{
   .container-section .texto {     
    
     grid-area: 2 / 1 / 3 / 2
+  }
+  .contacto {  
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
   }
 }
