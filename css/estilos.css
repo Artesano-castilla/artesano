@@ -530,11 +530,21 @@ h2{
 /*-----------------------------------------------------
       Estilos responsivos para pantallas laptop 
 ------------------------------------------------------*/
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
+  
   .banner img {
     width: 15%;    
-    right: 150px;
-    bottom: 90px;
+    right:50px;
+    bottom: 200px;
+  }
+}
+/*-----------------------------------------------------
+      Estilos responsivos para pantallas laptop 
+------------------------------------------------------*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .banner img {
+  display: none;
   }
 
   /* Información textual dentro del banner */
@@ -577,7 +587,9 @@ h2{
   body{
     margin-left: 0;
   }
-
+  .banner img {
+    display: none;
+  }
     /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
     left: 20px; /* Posición del botón del menú */
@@ -688,7 +700,9 @@ h2{
   body{
     margin-left: 0;
   }
-
+  .banner img {
+    display: none;
+  }
 
   /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
