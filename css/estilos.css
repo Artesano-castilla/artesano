@@ -20,7 +20,7 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  outline: solid 1px red;
+  /* outline: solid 1px red; */
 }
  /* Imágenes y elementos visuales ajustados al 100% de su contenedor */
 img,
