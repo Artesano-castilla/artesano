@@ -62,6 +62,7 @@ body {
   line-height: 1.5;
   background-color: var(--color-blanco);
   margin-left: 270px;
+  font-weight: 300;
   
 }
 
@@ -218,8 +219,9 @@ header{
 }
 
 .banner .info h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 100;  
+  color: var(--color-naranja-dark);
 }
 .banner .info h2 {
   font-size: 2rem;
@@ -291,6 +293,60 @@ header{
 /*-------------------------------------------------------------------
                         Estilos seccion carta
 ---------------------------------------------------------------------*/
+.contenedor-carta {
+  display: grid;
+  /* justify-items: center; */
+  grid-template-columns: repeat(4, .5fr);
+  grid-template-rows: .5fr;
+  gap: 20px;
+  margin: 20px;
+}
+.columna1 { grid-area: 1 / 1 / 2 / 2; }
+.columna2 { grid-area: 1 / 2 / 2 / 3; }
+.columna3 { grid-area: 1 / 3 / 2 / 4; }
+.columna4 { grid-area: 1 / 4 / 2 / 5; }
+
+.contenedor-carta .columna {
+  /* width: 30%; */
+  border: 2px solid var(--color-naranja-dark);
+  padding: 25px;
+  height: auto;
+}
+.contenedor-carta h3 {
+  color: var(--color-naranja-dark);
+  border-bottom: 1px solid var(--color-naranja-dark);
+  padding-bottom: 5px;
+}
+.contenedor-carta ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contenedor-carta li {
+  margin: 10px 0;
+  font-weight: 400;
+}
+.descarga {
+  text-align: center;
+  margin-bottom:30px;
+}
+.descarga-btn {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--color-naranja-dark);
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.descarga-btn:hover {
+  background-color: var(--color-naranja);
+}
+hr {
+  color: var(--color-gris);
+}
 
 
 
@@ -312,61 +368,60 @@ header{
 iframe{
   width: 100%;
   height: 224px;
+  cursor: pointer;
+  
 }
 
-.game-list {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.nota-list {
+  display: none;
+  grid-template-columns: .5fr .5fr;
+  grid-template-rows: auto auto;
+  align-items: center;
   gap: 2rem;
   padding: 2rem;
+  justify-items: center;
 }
 
-.game-card-perspective {
-  perspective: 1000px;
-}
-
-.game-card-container {
+.nota-card-container {
   max-width: 400px;
   position: relative;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
+  outline: 10px solid var(--color-naranja-dark);
 }
 
-.game-card-container:hover {
-  transform: rotateY(-12deg) rotateX(3deg) scale(105%);
-
-}
-
-.game-card-container:hover .game-banner .game-animation-img {
+.nota-card-container:hover .nota-banner .nota-animation-img {
   opacity: 1;
-
+  
 }
 
-.game-card-container:hover .game-banner {
+.nota-card-container:hover .nota-banner {
   translate: 0 -50%;
-
+  
   box-shadow:
-      0 0 25px var(--color-neutral),
-      -10px 0 40px var(--color-1),
-      10px 0 40px var(--color-2);
+  0 0 25px var(--color-neutral),
+  -10px 0 40px var(--color-1),
+  10px 0 40px var(--color-2);
 }
 
-.game-card-container:hover .game-details {
+.nota-card-container:hover .nota-details {
   bottom: -50%;
-
+  
   box-shadow: 4px 4px 16px 6px #00000030;
 }
 
-.game-details,
-.game-banner {
+.nota-details,
+.nota-banner {
   width: 100%;
   aspect-ratio: 16/9;
-
+  
   position: relative;
   transition: all 0.5s ease-in-out;
 }
 
-.game-banner{
+.nota-banner{
   --color-1: rgb(0, 191, 255);
   --color-2: rgb(255, 30, 0);
   --color-neutral: rgba(255, 255, 255, 0.369);
@@ -384,38 +439,52 @@ iframe{
   --color-neutral: rgba(255, 255, 255, 0.369);
 }
 
-.game-banner img {
+.nota-banner img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
-
-
+  object-fit: cover;
+  
+  
 }
 
-.game-animation-img {
+.nota-animation-img {
   position: absolute;
   top: 0;
   right: 0;
   opacity: 0;
   transition: all 0.5s ease-in-out; 
+  
 }
 
-.game-details {
+.nota-details {
   background-color: rgb(35, 43, 43);
   color: white;
   padding: 1rem;
-
-
+  
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  box-shadow: 4px 4px 8px 3px #0000006b;
-
+  
+  box-shadow: 4px 4px 8px 3px var(--color-naranja);
+  
   position: absolute;
   bottom: 0;
+  
 }
 
+.nota-details h3 {
+  font-weight: 100;
+ font-size: 1.2rem;
+ padding-bottom: 5px;
+ /* margin: 0 5px; */
+}
+
+
+
+/*-------------------------------------------------------------------
+                              Estilos para formulario
+---------------------------------------------------------------------*/
 
 
 /*-------------------------------------------------------------------
@@ -492,7 +561,7 @@ iframe{
 section .contenedor, .contacto{
   padding: 20px 50px;
 }
-main h2{
+section .titulo{
   font-size: 2rem; 
   font-weight: 100;   
   width: 100%;
@@ -533,6 +602,15 @@ main h2{
   .container-section .texto-3 {
     grid-column: 1 / -1; /* Los demás párrafos se apilan debajo de la imagen */
   }
+.contenedor-carta{
+  grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+
+.columna1 { grid-area: 2 / 1 / 3 / 3; }
+.columna2 { grid-area: 1 / 1 / 2 / 3; }
+.columna3 { grid-area: 1 / 3 / 2 / 5; }
+.columna4 { grid-area: 2 / 3 / 3 / 5; }
 }
 /*-----------------------------------------------------
       Estilos responsivos para pantallas laptop 
@@ -574,8 +652,8 @@ main h2{
     height: auto;
   }
 
-  .container-section img {
-  }
+  /* .container-section img {
+  } */
 
   .container-section .texto-1,
   .container-section .texto-2,
@@ -688,6 +766,15 @@ main h2{
   .container-section .texto-3 { 
     grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
   }
+
+  .contenedor-carta{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .columna1 { grid-area: 3 / 1 / 4 / 5; }
+  .columna2 { grid-area: 1 / 1 / 2 / 5; }
+  .columna3 { grid-area: 2 / 1 / 3 / 5; }
+  .columna4 { grid-area: 4 / 1 / 5 / 5; }
   
     .contacto {  
       flex-direction: column;
