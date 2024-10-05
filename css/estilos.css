@@ -627,7 +627,7 @@ grid-template-rows: repeat(2, 1fr);
   }
   
   .banner .info h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   .banner .info p {
@@ -743,7 +743,7 @@ grid-template-rows: repeat(2, 1fr);
   }
  /* Estilo del título en el banner */
  .banner .info h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: 1.3;
 }
   /* Estilo del párrafo en el banner */
@@ -798,7 +798,7 @@ grid-template-rows: repeat(2, 1fr);
   
   /* Estilo del título en el banner */
   .banner .info h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1.3;
   }
     /* Estilo del párrafo en el banner */
