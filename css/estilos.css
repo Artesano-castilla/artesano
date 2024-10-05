@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
     /* Definición de variables CSS (colores, gradiente, sombras) */
   --color-naranja-dark: #e96f41;
@@ -7,7 +8,7 @@
   --color-blanco: #eee;
   --color-gris: #5a5f54d7;
   --gradiente: linear-gradient(180deg, #4b4b4b, #5a5f54);
-  --box-shadow: 0px 0px 15px 5px hsla(0, 0%, 13%, 0.705);
+  --box-shadow: 0px 0px 15px 5px var(--color-naranja-light);
   --borde-texto:10px solid var(--color-naranja-dark)
 
 
@@ -16,6 +17,8 @@
                 Reset de estilos comunes para elementos
 ---------------------------------------------------------------------*/
 * {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
@@ -47,8 +50,10 @@ h5,
 h6 {
   line-height: 1.2;
   overflow-wrap: break-word;
+  font-family: "Platypi", serif;
 }
-  /* Quitar subrayado de los enlaces */
+
+/* Quitar subrayado de los enlaces */
 a {
   text-decoration: none;
 }
@@ -89,9 +94,7 @@ body {
   display: none;
   align-items: center;
   justify-content: center;
-  transition: all 0.9s ease;
-
-
+  transition: all 0.4s ease;
 }
 
 /* Ajustes cuando el menú está cerrado */
@@ -105,7 +108,7 @@ body {
 
 .wrapper .menu-btn i {
   position: absolute;
-  font-size: 23px;
+  font-size: 1.3rem;
   transition: all 0.9s ease;
 }
   /* Ocultar icono de "barras" cuando el menú está cerrado */
@@ -173,8 +176,7 @@ body {
 /* Estilos para los enlaces del menú lateral */
 #sidebar .list-items li a {
   color: var(--color-blanco);
-  text-decoration: none;
-  font-size: 18px;
+  text-decoration: none;  
   font-weight: bold;
   display: block;
 }
@@ -192,70 +194,42 @@ body {
                 Banner principal de la página
 ---------------------------------------------------------------------*/
 header{
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 .banner {
-  height: 500px;
+  height: 400px;
   background: url(../img/banner.webp);
-  background-position: center;
+  background-position:center;
   background-repeat: no-repeat;  
-  position: relative;
+  background-size:cover;
+  position: relative;  
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: flex-end;
-  padding-bottom: 40px;
   perspective: 1000px;
-}
-/* Imagen con forma de rombo en el banner */
-.banner img {
-  position: absolute;
-  width: 15%;
-  outline: 3px solid var(--color-naranja-dark);
-  outline-offset: -13px;
-  border-radius: 20px;
-  box-shadow: var(--box-shadow);
-  animation: rotate3D 8s linear infinite; /* animación */
-  z-index: 1;
-  right: 50px;
-  bottom: 90px;
-}
-  /* Efecto hover en la imagen del banner rombo */
-.banner img:hover {
-  filter: brightness(150%);
-}
-
-/* Animación 3D de la imagen en el banner */
-@keyframes rotate3D {
-  0% {
-    transform: rotateY(0deg) rotate(45deg);
-  }
-  50% {
-    transform: rotateY(180deg) rotate(45deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotate(45deg);
-  }
 }
 
 /* Información textual dentro del banner */
 .banner .info {  
+  position: relative;
   z-index: 3rem;
   text-align: center;
-  position: relative;
   color: var(--color-negro);   
 }
 
 .banner .info h1 {
   font-size: 3rem;
-  text-transform: unset;
+  font-weight: 100;  
+}
+.banner .info h2 {
+  font-size: 2rem;
+  font-weight: 100;
 }
 
-.banner .info p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
+.banner .info p {    
+  max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 
@@ -271,38 +245,53 @@ header{
             Sección principal dividida en dos columnas
 ---------------------------------------------------------------------*/
 
-
-
-
 .container-section {
   display: grid;
-  grid-template-columns: repeat(2, .5fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: 40% 60%; /* Imagen 40%, texto 60% en pantallas grandes */
+  grid-template-rows: auto;
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  max-width: 100%;
-  margin:  50px;  
-  }
+  grid-row-gap: 10px;  
+  padding: 50px 90px;
+}
 
-  .container-section .image img { 
-    /* width: 100%;   */
-  }
-  .container-section .image { 
-    grid-area: 1 / 1 / 2 / 2;
-    box-shadow: var(--box-shadow);
-    /* padding: 5px;      */
-  }
-  .container-section .texto {     
-    grid-area: 1 / 2 / 2 / 3; 
-  }
+.container-section .image { 
+  grid-area: 1 / 1 / 4 / 2;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: auto;
+}
+
+.container-section .image img { 
+  max-width: 100%; 
+  height: auto; 
+  box-shadow: var(--box-shadow);    
+  object-fit: contain; 
+  
+}
+
+.container-section .texto-1 { 
+  grid-area: 1 / 2 / 2 / 3; /* Primer párrafo al lado de la imagen */
+  text-align: justify;  
+}
+
+.container-section .texto-2 { 
+  grid-area: 2 / 2 / 3 / 3; /* Segundo párrafo debajo del primero */
+  text-align: justify;
+}
+
+.container-section .texto-3 { 
+  grid-area: 3 / 2 / 4 / 3; /* Tercer párrafo */
+  text-align: justify;
+}
+
+
+
 /*-------------------------------------------------------------------
                         Estilos seccion carta
 ---------------------------------------------------------------------*/
-/* img {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
+
 
 
 
@@ -310,149 +299,124 @@ header{
                         Estilos para el slider
 ---------------------------------------------------------------------*/
 
-.slider-wrapper {
-  /* Contenedor principal del slider */
-  position: relative;
-  margin: 0 40px;
-  background-color: var(--color-negro);
-}
-
-.slider-wrapper .slide-button {
-  /* Botones de navegación (previo/siguiente) */
-  position: absolute;
-  top: 50%;
-  outline: none;
-  border: none;
-  height: 50px;
-  width: 50px;
-  z-index: 5;
-  color: var(--color-blanco);
-  display: flex;
-  cursor: pointer;
-  font-size: 2.2rem;
-  background: #000;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
-
-.slider-wrapper .slide-button:hover {
-  /* Efecto hover para los botones */
-  background: #404040;
-}
-
-.slider-wrapper .slide-button#prev-slide {
-  /* Estilo del botón previo */
-  left: -25px;
-  display: none;
-}
-
-.slider-wrapper .slide-button#next-slide {
-  /* Estilo del botón siguiente */
-  right: -25px;
-}
-
-.slider-wrapper .image-list {
-  /* Lista de imágenes en cuadrícula con scroll horizontal */
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 18px;
-  font-size: 0;
-  list-style: none;
-  margin-bottom: 30px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.slider-wrapper .image-list::-webkit-scrollbar {
-  /* Ocultar scrollbar en navegadores basados en Webkit */
-  display: none;
-}
-
-.slider-wrapper .image-list .image-item {
-  /* Estilo para cada imagen del slider */
-  max-width: 400px;
-  height: 300px;
-  object-fit: cover;
-  display: inline-block;
-  outline: 3px solid var(--color-blanco);
-  outline-offset: -10px;
-  border-radius: 30px;
-}
-
-.carta .slider-scrollbar {
-  /* Contenedor de la barra de desplazamiento personalizada */
-  height: 24px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-
-}
-
-.slider-scrollbar .scrollbar-track {
-  /* Pista de la barra de desplazamiento */
-  background: #ccc;
-  width: 100%;
-  height: 5px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  position: relative;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-  /* Efecto hover en la pista del scrollbar */
-  height: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
-  /* Pulgar (thumb) de la barra de desplazamiento */
-  position: absolute;
-  background: var(--color-naranja);
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-  cursor: grab;
-  border-radius: inherit;
-}
-
-.slider-scrollbar .scrollbar-thumb:active {
-  /* Efecto al arrastrar el thumb del scrollbar */
-  cursor: grabbing;
-  height: 8px;
-  top: -2px;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-  /* Zona invisible de interacción con el thumb */
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-}
-
 /*-------------------------------------------------------------------
-                Estilos para inicializar el diseño
+                        Estilos para nuestro pueblo
 ---------------------------------------------------------------------*/
 
-section .contenedor, .contacto{
-  padding: 20px 50px;
+/*-------------------------------------------------------------------
+                        Estilos para notas
+---------------------------------------------------------------------*/
+#1 .contenedor {
+ perspective: 1000px;
 }
-h2{
-  font-size: 2rem;    
+iframe{
   width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  color: var(--color-blanco);
-  background: var(--color-negro);
-  border-top: var(--borde-texto);
-  border-bottom: var(--borde-texto);
-  z-index: 500;
+  height: 224px;
 }
+
+.game-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.game-card-perspective {
+  perspective: 1000px;
+}
+
+.game-card-container {
+  max-width: 400px;
+  position: relative;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.game-card-container:hover {
+  transform: rotateY(-12deg) rotateX(3deg) scale(105%);
+
+}
+
+.game-card-container:hover .game-banner .game-animation-img {
+  opacity: 1;
+
+}
+
+.game-card-container:hover .game-banner {
+  translate: 0 -50%;
+
+  box-shadow:
+      0 0 25px var(--color-neutral),
+      -10px 0 40px var(--color-1),
+      10px 0 40px var(--color-2);
+}
+
+.game-card-container:hover .game-details {
+  bottom: -50%;
+
+  box-shadow: 4px 4px 16px 6px #00000030;
+}
+
+.game-details,
+.game-banner {
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.game-banner{
+  --color-1: rgb(0, 191, 255);
+  --color-2: rgb(255, 30, 0);
+  --color-neutral: rgba(255, 255, 255, 0.369);
+}
+
+.srw30-glow {
+  --color-1: rgb(132, 189, 19);
+  --color-2: rgb(109, 6, 194);
+  --color-neutral: rgba(255, 255, 255, 0.369);
+}
+
+.hades-glow {
+  --color-1: rgb(255, 25, 0);
+  --color-2: rgb(255, 238, 0);
+  --color-neutral: rgba(255, 255, 255, 0.369);
+}
+
+.game-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+
+
+}
+
+.game-animation-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out; 
+}
+
+.game-details {
+  background-color: rgb(35, 43, 43);
+  color: white;
+  padding: 1rem;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 4px 4px 8px 3px #0000006b;
+
+  position: absolute;
+  bottom: 0;
+}
+
+
 
 /*-------------------------------------------------------------------
                               Footer
@@ -521,6 +485,25 @@ h2{
 .contacto .fuentes a {
   color: var(--color-naranja-light);
 }
+/*-------------------------------------------------------------------
+                Estilos para inicializar el diseño
+---------------------------------------------------------------------*/
+
+section .contenedor, .contacto{
+  padding: 20px 50px;
+}
+main h2{
+  font-size: 2rem; 
+  font-weight: 100;   
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: var(--color-blanco);
+  background: var(--color-negro);
+  border-top: var(--borde-texto);
+  border-bottom: var(--borde-texto);
+  z-index: 500;
+}
 
 
 /*-------------------------------------------------------------------
@@ -530,23 +513,33 @@ h2{
 /*-----------------------------------------------------
       Estilos responsivos para pantallas laptop 
 ------------------------------------------------------*/
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
   
-  .banner img {
-    width: 15%;    
-    right:50px;
-    bottom: 200px;
+  .container-section {
+    grid-template-columns: 50% 50%; /* Imagen y primer párrafo en columnas iguales */
+    grid-template-rows: auto;
+    padding: 30px 50px;
+  }
+
+  .container-section .image { 
+    grid-area: 1 / 1 / 2 / 2; /* La imagen ocupa la primera columna */
+  }
+
+  .container-section .texto-1 { 
+    grid-area: 1 / 2 / 2 / 3; /* Primer párrafo al lado de la imagen */
+  }
+
+  .container-section .texto-2,
+  .container-section .texto-3 {
+    grid-column: 1 / -1; /* Los demás párrafos se apilan debajo de la imagen */
   }
 }
 /*-----------------------------------------------------
       Estilos responsivos para pantallas laptop 
 ------------------------------------------------------*/
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   
-  .banner img {
-  display: none;
-  }
-
+ 
   /* Información textual dentro del banner */
   .banner .info {  
     z-index: 2;
@@ -560,36 +553,44 @@ h2{
   }
   
   .banner .info p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    /* max-width: 600px; */
-    margin: 0 auto;
-  }
-  .container-section {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, .5fr);
-  }
-  
-  .container-section .image { 
-   
-    grid-area: 1 / 1 / 2 / 2;  
-  }
-  .container-section .texto {     
-   
-    grid-area: 2 / 1 / 3 / 2
+    font-size: 1rem;  
+    /* margin: 0 auto; */
   }
 
+
+
+  .container-section {
+    grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+
+  .container-section .image { 
+    grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
+    max-width: 100%; /* Asegura que la imagen nunca exceda el ancho de su contenedor */
+    display: grid;  
+    place-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .container-section img {
+  }
+
+  .container-section .texto-1,
+  .container-section .texto-2,
+  .container-section .texto-3 { 
+    grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
+  }
 }
 /*-----------------------------------------------------
-      Estilos responsivos para pantallas medianas
+      Estilos responsivos para pantallas tablets
 ------------------------------------------------------*/
-@media (min-width: 481px) and (max-width: 768px) {
+@media(max-width: 768px) {
   body{
     margin-left: 0;
   }
-  .banner img {
-    display: none;
-  }
+
     /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
     left: 20px; /* Posición del botón del menú */
@@ -653,43 +654,41 @@ h2{
     width: 20%; 
 }
 
-/* Imagen con forma de rombo en el banner */
-.banner img {
-  position:static;
-  inset:50%;
-  width: 15%;
-  z-index: 1;
- 
-}
-
 /*--------------------banner---------------*/
   .banner {
-    height: 300px; /* Ajustar la altura del banner para pantallas más pequeñas */
+    height: 400px; /* Ajustar la altura del banner para pantallas más pequeñas */
     background-size: cover;
   }
-  /* Estilo del título en el banner */
-  .banner .info h1 {
-    font-size: 2rem;
-    line-height: 1.3;
+
+  fa-rotate-by {
+    --fa-rotate-angle: 135deg;
   }
-    /* Estilo del párrafo en el banner */
-  .banner .info p {
-    font-size: 16px;    
-    line-height: 1.1;
-  }  
+ /* Estilo del título en el banner */
+ .banner .info h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+  /* Estilo del párrafo en el banner */
+.banner .info p {
+  font-size: 16px;    
+  line-height: 1.1;
+} 
   .container-section {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, .5fr);
-    }
-    
-    .container-section .image { 
-     
-      grid-area: 1 / 1 / 2 / 2;  
-    }
-    .container-section .texto {     
-     
-      grid-area: 2 / 1 / 3 / 2
-    }
+    grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+
+  .container-section .image { 
+    grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
+  }
+
+  .container-section .texto-1,
+  .container-section .texto-2,
+  .container-section .texto-3 { 
+    grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
+  }
+  
     .contacto {  
       flex-direction: column;
       justify-content: center;
@@ -709,6 +708,17 @@ h2{
   .banner img {
     display: none;
   }
+  
+  /* Estilo del título en el banner */
+  .banner .info h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+    /* Estilo del párrafo en el banner */
+  .banner .info p {
+    font-size: 16px;    
+    line-height: 1.1;
+  } 
 
   /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
@@ -744,20 +754,7 @@ h2{
     /* Sidebar visible cuando el menú está abierto */
   #btn:checked ~ #sidebar {
     left: 0;
-  }
-  .container-section {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, .5fr);
-  }
-  
-  .container-section .image { 
-   
-    grid-area: 1 / 1 / 2 / 2;  
-  }
-  .container-section .texto {     
-   
-    grid-area: 2 / 1 / 3 / 2
-  }
+  }  
   .contacto {  
     flex-direction: column;
     justify-content: center;

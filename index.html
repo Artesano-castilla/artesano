@@ -6,13 +6,6 @@
   <title>Artesano</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Oxanium:wght@200..800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
   <script src="https://kit.fontawesome.com/6f924c7ad0.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
@@ -35,17 +28,22 @@
           <li><a href="#conocenos"><i class="fas fa-users"></i>Conocenos</a></li>
           <li><a href="#carta"><i class="fas fa-utensils"></i>Nuestra carta</a></li>
           <li><a href="#3"><i class="fas fa-map-marker-alt"></i>Nuestro Pueblo</a></li>
-          <li><a href="#4"><i class="fas fa-sticky-note"></i>Notas</a></li>
+          <li><a href="#4"><i class="fas fa-video"></i>Notas</a></li>
           <li><a href="#5"><i class="fas fa-envelope"></i>Contacto</a></li>
         </ul>
       </nav>
     </div>
     <div class="banner" id="inicio">
-      <div class="rombo">
+      <!-- <div class="rombo">
         <img src="img/banner-rombo.webp" alt="">
-      </div>
+      </div> -->
       <div class="info">
-        <h1><i class="fa-solid fa-burger fa-fade fa-xs"></i> Arte-sano Resto Bar <i class="fa-solid fa-pizza-slice fa-fade fa-xs"></i></h1>
+        <h1> Arte-sano
+        </h1>
+        <h2> <i class="fa-solid fa-burger fa-fade fa-xs"></i> Resto Bar
+          <i class="fa-solid fa-pizza-slice fa-fade fa-xs"></i>
+        </h2>
+
         <p> Sabores auténticos en un rincón lleno de historia. Pizzas artesanales, milanesas irresistibles y la
           mejor cerveza tirada te esperan frente a la plaza. ¡Ven a disfrutar!</p>
       </div>
@@ -56,43 +54,38 @@
     <section class="conocenos" id="conocenos">
       <h2>Nuestra historia</h2>
       <div class="container-section">
-          <img class="image" src="img/Conocenos.webp" alt="">
-        <div class="texto">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro consequatur enim
-            error
-            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
-            expedita
-            nam dolorem deleniti? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro
-            consequatur enim
-            error
-            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
-            expedita
-            nam dolorem deleniti?
-          </p>
-          <br>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro consequatur enim
-            error
-            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
-            expedita
-            nam dolorem deleniti? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta neque porro
-            consequatur enim
-            error
-            praesentium, harum aspernatur magnam, totam minima ut dolor illum, nostrum excepturi rerum
-            expedita
-            nam dolorem deleniti?
-          </p>
-          <br>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium odio enim itaque temporibus
-            asperiores, eius consequatur! Rerum sequi, beatae sunt sint molestias illum id tempore est quos
-            reprehenderit nam.
-          </p>
+        <div class="image">
+          <img src="img/Conocenos.webp" alt="Imagen sobre nosotros">
+        </div>
 
+        <!-- Primer párrafo que estará al lado de la imagen en pantallas laptop -->
+        <div class="texto-1">
+          <p>
+            <strong>Arte-sano</strong> comenzó en el año <strong>2020</strong> como un pequeño emprendimiento de
+            repostería, ofreciendo productos como <strong>panes saborizados</strong>, budines, tartas, churros y pizzas
+            caseras. Con el tiempo, y gracias al apoyo de nuestra comunidad, fuimos creciendo y expandiendo nuestro
+            menú.
+          </p>
+        </div>
+
+        <!-- Los párrafos siguientes que estarán debajo de la imagen -->
+        <div class="texto-2">
+          <p>
+            Lo que empezó como una pasión por la cocina casera se ha transformado en el <strong>resto bar</strong> que
+            es hoy, un <em>espacio familiar</em> donde <strong>toda nuestra familia trabaja unida</strong> para
+            brindarte lo mejor. Aquí, puedes venir con tu familia a <em>disfrutar de un ambiente acogedor</em> y de
+            <strong>sabores auténticos</strong>.
+          </p>
+        </div>
+        <div class="texto-3">
+          <p>
+            Nuestra dedicación a la <strong>calidad</strong> y el amor por los <em>ingredientes frescos</em> siguen
+            siendo el corazón de cada plato que servimos.
+          </p>
         </div>
       </div>
     </section>
+
     <section id="carta" class="carta">
       <h2>Nuestra Carta</h2>
       <img src="img/carta.png" alt="">
@@ -123,14 +116,56 @@
     </section>
     <section class="pueblo" id="3">
       <h2>Nuestro Pueblo</h2>
-      <div class="contenedor" >
+      <div class="contenedor">
       </div>
     </section>
     <section id="4">
       <h2>Notas</h2>
-      <div class="contenedor" >
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/9uFYlD7kie8?si=rOBve3LbjW6mt4F9&amp;start=100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="300" height="300" src="https://www.youtube.com/embed/n7BVayu-rRg?si=fI6i0lyRcdpwbQM2&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      <div class="contenedor">
+        <div class="game-list">
+          <div class="game-card-perspective">
+            <div class="game-card-container">
+              <div class="game-details">
+                <h3>Mega Man Battle Network Legacy Collection</h3>
+                <p>¡Prepárate para conectarte a la red para enfrentarte a programas enemigos letales en
+                  electrizantes batallas usando raros BattleChips para crear el mazo de movimientos especiales
+                  perfecto!
+                </p>
+
+              </div>
+              <div class="game-banner">
+                <img class="game-banner-img" src="img/banners/mmbnlc.avif" alt="">
+                <iframe class="game-animation-img"
+                  src="https://www.youtube.com/embed/9uFYlD7kie8?si=rOBve3LbjW6mt4F9&amp;start=100"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="game-card-perspective">
+            <div class="game-card-container">
+              <div class="game-details">
+                <h3>Super Robot Wars 30</h3>
+                <p>30 años después, la batalla por el futuro de nuestro mundo continúa. Super Robot Wars es
+                  un
+                  RPG
+                  táctico que reúne a personajes y robots de distintos animes de mechas para luchar contra
+                  sus
+                  enemigos comunes.</p>
+
+              </div>
+              <div class="game-banner srw30-glow">
+                <img class="game-banner-img" src="img/banners/srw30.jpg" alt="">
+                <iframe class="game-animation-img" src="https://www.youtube.com/embed/n7BVayu-rRg?si=fI6i0lyRcdpwbQM2&amp;start=1"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>      
+        </div>
       </div>
     </section>
     <section class="formulario" id="5">
@@ -158,13 +193,13 @@
                 <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
               </div>
             </div>
-  
+
             <div class="campo">
               <label for="mensaje">Mensaje:</label>
               <textarea id="mensaje" name="mensaje" rows="4"></textarea>
             </div>
           </div>
-  
+
           <button class="btn-contacto" type="submit">Enviar</button>
         </form>
       </div>
@@ -172,7 +207,10 @@
     <section class="formulario">
       <h3>Donde estamos</h3>
       <div class="contenedor">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6375425688298!2d-59.90992972353066!3d-34.61332585800684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b955b1e6837001%3A0x3df6a1f0bcaf766f!2sPizzeria%20ARTE%20-%20SANO%20Beer%20%26%20Co!5e0!3m2!1ses-419!2sar!4v1727707614217!5m2!1ses-419!2sar" width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6375425688298!2d-59.90992972353066!3d-34.61332585800684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b955b1e6837001%3A0x3df6a1f0bcaf766f!2sPizzeria%20ARTE%20-%20SANO%20Beer%20%26%20Co!5e0!3m2!1ses-419!2sar!4v1727707614217!5m2!1ses-419!2sar"
+          width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
@@ -191,18 +229,21 @@
       <h4>Redes Sociales</h4>
       <ul>
         <li>
-         
-          <a href="https://www.facebook.com/ricardoGarcia93/" target="_blank"> <i class="fa-brands fa-facebook"></i> Facebook</a>
+
+          <a href="https://www.facebook.com/ricardoGarcia93/" target="_blank"> <i class="fa-brands fa-facebook"></i>
+            Facebook</a>
         </li>
         <li>
-          <a href="https://www.instagram.com/ricardogarci4" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.instagram.com/ricardogarci4" target="_blank"><i class="fa-brands fa-instagram"></i>
+            Instagram</a>
         </li>
         <li>
-          
-          <a href="https://www.linkedin.com/in/ricardo-garci4/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+
+          <a href="https://www.linkedin.com/in/ricardo-garci4/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            LinkedIn</a>
         </li>
       </ul>
-    </div>    
+    </div>
   </footer>
 </body>
 
