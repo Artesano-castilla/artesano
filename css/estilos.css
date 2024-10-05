@@ -583,7 +583,10 @@ section .titulo{
       Estilos responsivos para pantallas laptop 
 ------------------------------------------------------*/
 @media (max-width: 1440px) {
-  
+
+  .banner .info h1{
+    font-size: 4.5rem;
+  }
   .container-section {
     grid-template-columns: 50% 50%; /* Imagen y primer párrafo en columnas iguales */
     grid-template-rows: auto;
