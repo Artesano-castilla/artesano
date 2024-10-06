@@ -319,6 +319,7 @@ header{
 }
 .contenedor-carta h3 {
   font-size: 1.5rem;
+  font-weight: 200;
   text-transform:capitalize;
   color: var(--color-naranja-dark);
   border-bottom: 1px solid var(--color-naranja-dark);
@@ -332,31 +333,29 @@ header{
   margin: 10px 0;
   font-weight: 400;
 }
-
-
-.carta .titulo-carta h2 {
-  font-size: 2rem; 
-  font-weight: 100;   
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
+.carta .titulo-carta{  
+  display: flex;
+ justify-content: center;
+  padding: 20px;
   color: var(--color-blanco);
   background: var(--color-negro);
   border-top: var(--borde-texto);
-  border-bottom: var(--borde-texto);
-  z-index: 500;
+  border-bottom: var(--borde-texto);     
+}
+
+.carta .titulo-carta h2 {
+  font-size: 2rem; 
+  font-weight: 100;    
+  margin: 0 10px; 
 }
 .descarga-btn {  
-  position:absolute ;
-  right: 20px;
-  padding: 5px 20px;
+  padding: 10px 20px;
   font-size: 1rem;
   font-weight: 400;
   background-color: var(--color-naranja-dark);
   color: var(--color-blanco);
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 23px;
+  border-radius: 5px;    
 }
 .descarga-btn:hover {
   background-color: var(--color-naranja);
@@ -972,6 +971,10 @@ grid-template-rows: repeat(2, 1fr);
   #btn:checked ~ #sidebar {
     left: 0;
   }  
+
+  .titulo-carta{
+    text-align: end;
+  }
   .contacto {  
     flex-direction: column;
     justify-content: center;
