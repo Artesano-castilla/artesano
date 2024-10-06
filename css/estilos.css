@@ -2,14 +2,14 @@
 :root {
     /* Definición de variables CSS (colores, gradiente, sombras) */
   --color-naranja-dark: #e96f41;
-  --color-naranja-light: #f7bf72;
+  --color-naranja-light: linear-gradient(to bottom, #e96f41 1%,#1e1e1e 100%);;
   --color-naranja: #f4a942;
-  --color-negro: #1e1e1e;
+  /* --gradiente: #1e1e1e; */
+  --gradiente: linear-gradient(to bottom, #1e1e1e 0%,#5a5f54 100%);
   --color-blanco: #eee;
-  --color-gris: #5a5f54d7;
-  --gradiente: linear-gradient(180deg, #4b4b4b, #5a5f54);
+  --color-negro: #1e1e1e;  
   --box-shadow: 0px 0px 15px 5px var(--color-naranja-light);
-  --borde-texto:10px solid var(--color-naranja-dark)
+  --borde-texto:5px solid var(--color-naranja-dark)
 
 
 }
@@ -84,7 +84,7 @@ body {
   position: absolute;
   left: 255px;
   top: 10px;
-  background: var(--color-negro);
+  background: var(--gradiente);
   color: var(--color-blanco);
   height: 45px;
   width: 45px;
@@ -154,7 +154,7 @@ body {
 /* Lista de elementos en el menú lateral */
 #sidebar .list-items {
   position: relative;
-  background: var(--color-negro);
+  background: var(--gradiente);
   width: 100%;
   height: 100%;
   list-style: none;
@@ -163,15 +163,13 @@ body {
 
 #sidebar .list-items li {
   padding-left: 40px;
-  line-height: 50px;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 0.5px solid #33333340;
+  line-height: 50px; 
   transition: all 0.3s ease;
 }
   /* Efecto hover en cada elemento */
 #sidebar .list-items li:hover {
   box-shadow: 0 0px 10px 3px #22222255;
-  background: var(--color-naranja-dark);
+  background: var(--color-naranja-light);
 }
 
 /* Estilos para los enlaces del menú lateral */
@@ -198,7 +196,7 @@ header{
   margin-bottom: 30px;
 }
 .banner {
-  height: 400px;
+  height: 450px;
   background: url(../img/banner.webp);
   background-position:center;
   background-repeat: no-repeat;  
@@ -215,7 +213,7 @@ header{
   position: relative;
   z-index: 3rem;
   text-align: center;
-  color: var(--color-negro);   
+  color: var(--color-gris);   
 }
 
 .banner .info h1 {
@@ -338,7 +336,7 @@ header{
  justify-content: center;
   padding: 20px;
   color: var(--color-blanco);
-  background: var(--color-negro);
+  background: var(--gradiente);
   border-top: var(--borde-texto);
   border-bottom: var(--borde-texto);     
 }
@@ -553,7 +551,7 @@ iframe{
   margin-bottom: 5px;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-negro);
+  color: var(----color-negro);
 }
 
 /* Estilos para los inputs de texto y correo */
@@ -566,7 +564,7 @@ iframe{
   border: 2px solid var(--color-naranja-dark);
   border-radius: 5px;
   background-color: var(--color-blanco);
-  color: var(--color-negro);
+  color: var(--negro);
   transition: border-color 0.3s ease;
 }
 
@@ -607,7 +605,7 @@ iframe{
                               Footer
 ---------------------------------------------------------------------*/
 .contacto {
-  background-color: var(--color-naranja-dark);
+  background: var(--color-naranja-light);
   color: var(--color-blanco);
   padding: 50px 0;
   font-size: 1.2rem;
@@ -632,18 +630,13 @@ iframe{
   margin-bottom: 20px;
   font-size: 1.3rem;
   font-weight: 200;
-  color: var(--color-negro);
+  color: var(----color-negro);
   
 }
 
 .contacto p {
   font-weight: 400;
-  
-
 }
-
-/**Redes Sociales*/
-/**Posicionamiento del Footer*/
 .contacto .redes-sociales ul {
   list-style: none;
   display: flex;
@@ -664,7 +657,7 @@ iframe{
 }
 
 .contacto .redes-sociales ul li :hover {
-  color: var(--color-negro);
+  color: var(--color-naranja);
 }
 
 .contacto .fuentes a {
@@ -684,7 +677,7 @@ section .titulo{
   text-align: center;
   padding: 10px 0;
   color: var(--color-blanco);
-  background: var(--color-negro);
+  background: var(--gradiente);
   border-top: var(--borde-texto);
   border-bottom: var(--borde-texto);
   z-index: 500;
