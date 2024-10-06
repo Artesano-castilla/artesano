@@ -293,7 +293,6 @@ header{
 ---------------------------------------------------------------------*/
 .contenedor-carta {
   display: grid;
-  /* justify-items: center; */
   grid-template-columns: repeat(4, .5fr);
   grid-template-rows: .5fr;
   gap: 20px;
@@ -310,17 +309,16 @@ header{
 .columna4 { grid-area: 1 / 4 / 2 / 5; }
 
 .contenedor-carta .columna {
-  /* width: 30%; */
   border: 2px solid var(--color-naranja-dark);
   padding: 25px;
   height: auto;
 }
 .contenedor-carta h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 200;
   text-transform:capitalize;
   color: var(--color-naranja-dark);
-  border-bottom: 1px solid var(--color-naranja-dark);
+  border-bottom: 2px solid var(--color-naranja-dark);
   padding-bottom: 5px;
 }
 .contenedor-carta ul {
@@ -334,22 +332,19 @@ header{
 .carta .titulo-carta{  
   display: flex;
  justify-content: center;
-  padding: 20px;
+  padding: 10px;
   color: var(--color-blanco);
   background: var(--gradiente);
   border-top: var(--borde-texto);
   border-bottom: var(--borde-texto);     
 }
-
 .carta .titulo-carta h2 {
-  font-size: 2rem; 
+  font-size: 1.7rem; 
   font-weight: 100;    
   margin: 0 10px; 
 }
 .descarga-btn {  
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 400;
+  padding: 5px 20px;  
   background-color: var(--color-naranja-dark);
   color: var(--color-blanco);
   text-decoration: none;
@@ -362,9 +357,6 @@ hr {
   color: var(--color-gris);
 }
 
-
-
-
 /*-------------------------------------------------------------------
                         Estilos para el slider
 ---------------------------------------------------------------------*/
@@ -372,7 +364,43 @@ hr {
 /*-------------------------------------------------------------------
                         Estilos para nuestro pueblo
 ---------------------------------------------------------------------*/
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px var(--color-naranja-dark);
+  max-width: 300px; /* Ajuste del ancho máximo */
+  margin: 20px auto;
+  overflow: hidden;
+}
 
+/* Estilo para la imagen de la card */
+.card-img {
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajustar la imagen sin distorsionarla */
+}
+
+/* Contenido textual de la card */
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--color-negro);
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: var(--color-negro);
+}
 /*-------------------------------------------------------------------
                         Estilos para notas
 ---------------------------------------------------------------------*/
@@ -382,8 +410,7 @@ hr {
 iframe{
   width: 100%;
   height: 224px;
-  cursor: pointer;
-  
+  cursor: pointer;  
 }
 
 .nota-list {
@@ -407,8 +434,7 @@ iframe{
 }
 
 .nota-card-container:hover .nota-banner .nota-animation-img {
-  opacity: 1;
-  
+  opacity: 1;  
 }
 
 .nota-card-container:hover .nota-banner {
@@ -473,8 +499,7 @@ iframe{
 .nota-details {
   background-color: rgb(35, 43, 43);
   color: white;
-  padding: 1rem;
-  
+  padding: 1rem;  
   
   display: flex;
   flex-direction: column;
@@ -491,7 +516,6 @@ iframe{
   font-weight: 100;
  font-size: 1.2rem;
  padding-bottom: 5px;
- /* margin: 0 5px; */
 }
 
 
@@ -501,6 +525,7 @@ iframe{
 ---------------------------------------------------------------------*/
 /* Contenedor principal del formulario y el mapa */
 .formulario .contenedor {
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -513,8 +538,8 @@ iframe{
 .formulario form {
   grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
   padding: 30px;
   background-color: var(--color-blanco);
   border-radius: 8px;
@@ -667,11 +692,11 @@ iframe{
                 Estilos para inicializar el diseño
 ---------------------------------------------------------------------*/
 
-section .contenedor, .contacto{
-  padding: 20px 50px;
+section .contenedor{
+  padding: 20px 0px;
 }
 section .titulo{
-  font-size: 2rem; 
+  font-size: 1.7rem; 
   font-weight: 100;   
   width: 100%;
   text-align: center;
@@ -936,7 +961,6 @@ grid-template-rows: repeat(2, 1fr);
 
   }
   /* Icono del menú: barra */
-
   .wrapper .menu-btn i.fa-bars {
     opacity: 1;/* Visible cuando el menú está cerrado */
   }
@@ -963,11 +987,8 @@ grid-template-rows: repeat(2, 1fr);
     /* Sidebar visible cuando el menú está abierto */
   #btn:checked ~ #sidebar {
     left: 0;
-  }  
+  }   
 
-  .titulo-carta{
-    text-align: end;
-  }
   .contacto {  
     flex-direction: column;
     justify-content: center;
