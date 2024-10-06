@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
 
-  <script src="https://kit.fontawesome.com/6f924c7ad0.js" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+
 
 </head>
 
@@ -272,9 +271,10 @@
         </div>
       </div>
     </section>
-    <section class="formulario" id="5">
+    <section class="formulario">
       <h2 class="titulo">Haga su Pedido</h2>
       <div class="contenedor">
+        <!-- Formulario -->
         <form action="#" method="post">
           <div class="container-form">
             <div class="nombre-apellido">
@@ -297,26 +297,22 @@
                 <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
               </div>
             </div>
-
             <div class="campo">
               <label for="mensaje">Mensaje:</label>
               <textarea id="mensaje" name="mensaje" rows="4"></textarea>
             </div>
           </div>
-
           <button class="btn-contacto" type="submit">Enviar</button>
         </form>
-      </div>
-    </section>
-    <section class="formulario">
-      <h3>Donde estamos</h3>
-      <div class="contenedor">
+    
+        <!-- Mapa (iframe) -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6375425688298!2d-59.90992972353066!3d-34.61332585800684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b955b1e6837001%3A0x3df6a1f0bcaf766f!2sPizzeria%20ARTE%20-%20SANO%20Beer%20%26%20Co!5e0!3m2!1ses-419!2sar!4v1727707614217!5m2!1ses-419!2sar"
-          width="auto" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
     </section>
+    
   </main>
   <footer id="contact" class="contacto">
     <div class="perfil">
@@ -349,6 +345,8 @@
       </ul>
     </div>
   </footer>
+  <script src="https://kit.fontawesome.com/6f924c7ad0.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
