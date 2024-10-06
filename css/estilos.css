@@ -607,7 +607,7 @@ iframe{
                               Footer
 ---------------------------------------------------------------------*/
 .contacto {
-  background-color: var(--color-negro);
+  background-color: var(--color-naranja-dark);
   color: var(--color-blanco);
   padding: 50px 0;
   font-size: 1.2rem;
@@ -616,18 +616,13 @@ iframe{
   margin-top: 20PX;
 }
 
-.contacto .datos,
-.contacto .redes-sociales,
-.contacto .fuentes {
-  border-left: 1px solid;
-  padding-left: 20px;
-}
 
 /***Imagen de perfil*/
 .contacto .perfil img {
   border-radius: 50%;
   width: 150px;
-  border: 5px solid var(--blanco);
+  outline: 5px solid var(--color-blanco);
+  padding:5px ;
   margin-bottom: 20px;
 }
 
@@ -636,10 +631,15 @@ iframe{
   padding-bottom: 10px;
   margin-bottom: 20px;
   font-size: 1.3rem;
+  font-weight: 200;
+  color: var(--color-negro);
+  
 }
 
 .contacto p {
-  line-height: 30px;
+  font-weight: 400;
+  
+
 }
 
 /**Redes Sociales*/
@@ -657,14 +657,14 @@ iframe{
 }
 
 .contacto .redes-sociales ul li a {
-  color: var(--blanco);
+  color: var(--color-blanco);
   text-decoration: none;
   transition: color 0.3s ease;
   padding-left: 10px;
 }
 
 .contacto .redes-sociales ul li :hover {
-  color: var(--color-naranja-light);
+  color: var(--color-negro);
 }
 
 .contacto .fuentes a {
