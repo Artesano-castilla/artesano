@@ -4,7 +4,6 @@
   --color-naranja-dark: #e96f41;
   --color-naranja-light: linear-gradient(to bottom, #e96f41 1%,#1e1e1e 100%);;
   --color-naranja: #f4a942;
-  /* --gradiente: #1e1e1e; */
   --transparencia: linear-gradient(to bottom, #1e1e1e61 0%,#5a5f5456 100%);
   --gradiente: linear-gradient(to bottom, #1e1e1e 0%,#5a5f54 100%);
   --color-blanco: #f4f4f4;
@@ -385,7 +384,6 @@ hr {
   text-align: justify;
   background:#ffffffcc;
   box-shadow: 0px 1px 15px 1px var(--color-negro);
-
   
   border-radius: 20px;
   padding: 10px;
@@ -393,6 +391,7 @@ hr {
   left: calc(50% - 110px);
   top: 0;
 }
+
 
 .card-img {
   border-radius: 20px;
@@ -419,7 +418,7 @@ hr {
 #next, #prev{
   position: absolute;
   top: 40%;
-  color: var(--color-naranja);
+  color: var(--color-blanco);
   /* border: 2px solid var(--color-negro); */
   /* border-radius: 50%; */
   border: none;
@@ -676,22 +675,22 @@ section .titulo{
   .banner .info h1{
     font-size: 4.5rem;
   }
-  .container-section {
+  .conocenos .container-section {
     grid-template-columns: 50% 50%; /* Imagen y primer párrafo en columnas iguales */
     grid-template-rows: auto;
     padding: 30px 50px;
   }
 
-  .container-section .image { 
+   .conocenos .container-section .image { 
     grid-area: 1 / 1 / 2 / 2; /* La imagen ocupa la primera columna */
   }
 
-  .container-section .texto-1 { 
+   .conocenos .container-section .texto-1 { 
     grid-area: 1 / 2 / 2 / 3; /* Primer párrafo al lado de la imagen */
   }
 
-  .container-section .texto-2,
-  .container-section .texto-3 {
+   .conocenos .container-section .texto-2,
+   .conocenos .container-section .texto-3 {
     grid-column: 1 / -1; /* Los demás párrafos se apilan debajo de la imagen */
   }
 .contenedor-carta{
@@ -730,13 +729,13 @@ grid-template-rows: repeat(2, 1fr);
 
 
 
-  .container-section {
+   .conocenos .container-section {
     grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
     grid-template-rows: auto;
     padding: 20px;
   }
 
-  .container-section .image { 
+  .conocenos  .container-section .image { 
     grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
     max-width: 100%; /* Asegura que la imagen nunca exceda el ancho de su contenedor */
     display: grid;  
@@ -748,9 +747,9 @@ grid-template-rows: repeat(2, 1fr);
   /* .container-section img {
   } */
 
-  .container-section .texto-1,
-  .container-section .texto-2,
-  .container-section .texto-3 { 
+  .conocenos  .container-section .texto-1,
+  .conocenos  .container-section .texto-2,
+  .conocenos  .container-section .texto-3 { 
     grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
   }
   .formulario .contenedor {
@@ -840,9 +839,6 @@ grid-template-rows: repeat(2, 1fr);
     background-size: cover;
   }
 
-  fa-rotate-by {
-    --fa-rotate-angle: 135deg;
-  }
  /* Estilo del título en el banner */
  .banner .info h1 {
   font-size: 4rem;
@@ -853,21 +849,23 @@ grid-template-rows: repeat(2, 1fr);
   font-size: 16px;    
   line-height: 1.1;
 } 
-  .container-section {
+ .conocenos .container-section {
     grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
     grid-template-rows: auto;
     padding: 20px;
   }
 
-  .container-section .image { 
+   .conocenos .container-section .image { 
     grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
   }
 
-  .container-section .texto-1,
-  .container-section .texto-2,
-  .container-section .texto-3 { 
+   .conocenos .container-section .texto-1,
+   .conocenos .container-section .texto-2,
+   .conocenos .container-section .texto-3 { 
     grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
   }
+
+
 
   .contenedor-carta{
     grid-template-columns: 1fr;
