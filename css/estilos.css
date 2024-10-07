@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
-    /* Definición de variables CSS (colores, gradiente, sombras) */
+  /* Definición de variables CSS (colores, gradiente, sombras) */
   --color-naranja-dark: #e96f41;
-  --color-naranja-light: linear-gradient(to bottom, #e96f41 1%,#1e1e1e 100%);;
+  --color-naranja-light: linear-gradient(to bottom, #e96f41 1%, #1e1e1e 100%);
+  ;
   --color-naranja: #f4a942;
-  --transparencia: linear-gradient(to bottom, #1e1e1e61 0%,#5a5f5456 100%);
-  --gradiente: linear-gradient(to bottom, #1e1e1e 0%,#5a5f54 100%);
+  --transparencia: linear-gradient(to bottom, #1e1e1e61 0%, #5a5f5456 100%);
+  --gradiente: linear-gradient(to bottom, #1e1e1e 0%, #5a5f54 100%);
   --color-blanco: #f4f4f4;
-  --color-negro: #1e1e1e;  
+  --color-negro: #1e1e1e;
   --box-shadow: 0px 0px 15px 2px var(--color-negro);
-  --borde-texto:5px solid var(--color-naranja-dark)
-
-
+  --borde-texto: 5px solid var(--color-naranja-dark)
 }
+
 /*-------------------------------------------------------------------
                 Reset de estilos comunes para elementos
 ---------------------------------------------------------------------*/
@@ -25,7 +26,8 @@
   box-sizing: border-box;
   /* outline: solid 1px red; */
 }
- /* Imágenes y elementos visuales ajustados al 100% de su contenedor */
+
+/* Imágenes y elementos visuales ajustados al 100% de su contenedor */
 img,
 picture,
 video,
@@ -34,14 +36,16 @@ canvas {
   max-width: 100%;
   display: block;
 }
-  /* Heredar la fuente de estilo del contenedor */
+
+/* Heredar la fuente de estilo del contenedor */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-  /* Control del interlineado y manejo de desbordamiento en títulos */
+
+/* Control del interlineado y manejo de desbordamiento en títulos */
 h1,
 h2,
 h3,
@@ -57,13 +61,14 @@ h6 {
 a {
   text-decoration: none;
 }
+
 /* Ajuste general del cuerpo de la página */
 body {
   line-height: 1.5;
   background-color: var(--color-blanco);
   margin-left: 270px;
   font-weight: 300;
-  
+
 }
 
 /*-------------------------------------------------------------------
@@ -99,12 +104,14 @@ body {
 }
 
 /* Ajustes cuando el menú está cerrado */
-#btn:checked ~ .menu-btn {
+#btn:checked~.menu-btn {
   left: 20px;
 }
-#btn:checked ~ .main {
+
+#btn:checked~.main {
   margin-left: 0px;
 }
+
 /* Iconos del botón de menú */
 
 .wrapper .menu-btn i {
@@ -112,17 +119,19 @@ body {
   font-size: 1.3rem;
   transition: all 0.9s ease;
 }
-  /* Ocultar icono de "barras" cuando el menú está cerrado */
+
+/* Ocultar icono de "barras" cuando el menú está cerrado */
 .wrapper .menu-btn i.fa-bars {
   opacity: 0;
 }
 
-#btn:checked ~ .menu-btn i.fa-times {
+#btn:checked~.menu-btn i.fa-times {
   opacity: 0;
   transform: rotate(-180deg);
 }
-  /* Mostrar el icono de "barras" cuando el menú está abierto */
-  #btn:checked ~ .menu-btn i.fa-bars {
+
+/* Mostrar el icono de "barras" cuando el menú está abierto */
+#btn:checked~.menu-btn i.fa-bars {
   opacity: 1;
   transform: rotate(180deg);
 }
@@ -138,10 +147,12 @@ body {
   transition: all 0.9s ease;
   /* display: none; */
 }
-  /* Ocultar el sidebar cuando el menú está cerrado */
-#btn:checked ~ #sidebar {
+
+/* Ocultar el sidebar cuando el menú está cerrado */
+#btn:checked~#sidebar {
   left: -279px;
 }
+
 /* Título del sidebar */
 #sidebar .title {
   background: var(--color-naranja-dark);
@@ -151,6 +162,7 @@ body {
   align-items: center;
   padding: 20px;
 }
+
 /* Lista de elementos en el menú lateral */
 #sidebar .list-items {
   position: relative;
@@ -159,14 +171,16 @@ body {
   height: 100%;
   list-style: none;
 }
+
 /* Estilos para cada elemento del menú */
 
 #sidebar .list-items li {
   padding-left: 40px;
-  line-height: 50px; 
+  line-height: 50px;
   transition: all 0.3s ease;
 }
-  /* Efecto hover en cada elemento */
+
+/* Efecto hover en cada elemento */
 #sidebar .list-items li:hover {
   box-shadow: 0 0px 10px 3px #22222255;
   background: var(--color-naranja-light);
@@ -175,11 +189,12 @@ body {
 /* Estilos para los enlaces del menú lateral */
 #sidebar .list-items li a {
   color: var(--color-blanco);
-  text-decoration: none;  
+  text-decoration: none;
   font-weight: bold;
   display: block;
 }
-  /* Estilo al enfocar un enlace */
+
+/* Estilo al enfocar un enlace */
 #sidebar .list-items li a:focus {
   outline: 2px solid var(--color-naranja);
 }
@@ -192,16 +207,17 @@ body {
 /*-------------------------------------------------------------------
                 Banner principal de la página
 ---------------------------------------------------------------------*/
-header{
+header {
   margin-bottom: 30px;
 }
+
 .banner {
   height: 450px;
   background: url(../img/banner.webp);
-  background-position:center;
-  background-repeat: no-repeat;  
-  background-size:cover;
-  position: relative;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -209,24 +225,25 @@ header{
 }
 
 /* Información textual dentro del banner */
-.banner .info {  
+.banner .info {
   position: relative;
   z-index: 3rem;
   text-align: center;
-  color: var(--color-gris);   
+  color: var(--color-gris);
 }
 
 .banner .info h1 {
   font-size: 5rem;
-  font-weight: 100;  
+  font-weight: 100;
   color: var(--color-naranja-dark);
 }
+
 .banner .info h2 {
   font-size: 2rem;
   font-weight: 100;
 }
 
-.banner .info p {    
+.banner .info p {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -247,42 +264,46 @@ header{
 
 .conocenos .container-section {
   display: grid;
-  grid-template-columns: 40% 60%; /* Imagen 40%, texto 60% en pantallas grandes */
+  grid-template-columns: 40% 60%;
+  /* Imagen 40%, texto 60% en pantallas grandes */
   grid-template-rows: auto;
   grid-column-gap: 20px;
-  grid-row-gap: 10px;  
+  grid-row-gap: 10px;
   padding: 50px 90px;
 }
 
-.conocenos .container-section .image { 
+.conocenos .container-section .image {
   grid-area: 1 / 1 / 4 / 2;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  width: 100%; 
-  height: auto;  
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
-.conocenos .container-section .image img { 
-  max-width: 100%; 
-  height: auto; 
-  box-shadow: var(--box-shadow);    
-  object-fit: contain; 
-  
+.conocenos .container-section .image img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--box-shadow);
+  object-fit: contain;
+
 }
 
-.conocenos .container-section .texto-1 { 
-  grid-area: 1 / 2 / 2 / 3; /* Primer párrafo al lado de la imagen */
-  text-align: justify;  
-}
-
-.conocenos .container-section .texto-2 { 
-  grid-area: 2 / 2 / 3 / 3; /* Segundo párrafo debajo del primero */
+.conocenos .container-section .texto-1 {
+  grid-area: 1 / 2 / 2 / 3;
+  /* Primer párrafo al lado de la imagen */
   text-align: justify;
 }
 
-.conocenos .container-section .texto-3 { 
-  grid-area: 3 / 2 / 4 / 3; /* Tercer párrafo */
+.conocenos .container-section .texto-2 {
+  grid-area: 2 / 2 / 3 / 3;
+  /* Segundo párrafo debajo del primero */
+  text-align: justify;
+}
+
+.conocenos .container-section .texto-3 {
+  grid-area: 3 / 2 / 4 / 3;
+  /* Tercer párrafo */
   text-align: justify;
 }
 
@@ -299,62 +320,90 @@ header{
   margin: 20px;
   position: relative;
 }
+
 .carta {
   position: relative;
 
 }
-.columna1 { grid-area: 1 / 1 / 2 / 2; }
-.columna2 { grid-area: 1 / 2 / 2 / 3; }
-.columna3 { grid-area: 1 / 3 / 2 / 4; }
-.columna4 { grid-area: 1 / 4 / 2 / 5; }
+
+.columna1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.columna2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.columna3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.columna4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
 
 .contenedor-carta .columna {
   border: 2px solid var(--color-naranja-dark);
   padding: 25px;
   height: auto;
 }
+
 .contenedor-carta h3 {
   font-size: 1.2rem;
   font-weight: 200;
-  text-transform:capitalize;
+  text-transform: capitalize;
   color: var(--color-naranja-dark);
   border-bottom: 2px solid var(--color-naranja-dark);
   padding-bottom: 5px;
 }
+
 .contenedor-carta ul {
   list-style-type: none;
   padding: 0;
 }
+
 .contenedor-carta li {
   margin: 10px 0;
   font-weight: 400;
 }
-.carta .titulo-carta{  
+
+.carta .titulo-carta {
   display: flex;
- justify-content: center;
+  justify-content: center;
   padding: 10px;
   color: var(--color-blanco);
   background: var(--gradiente);
   border-top: var(--borde-texto);
-  border-bottom: var(--borde-texto);     
+  border-bottom: var(--borde-texto);
 }
+
 .carta .titulo-carta h2 {
-  font-size: 1.7rem; 
-  font-weight: 100;    
-  margin: 0 10px; 
+  font-size: 1.7rem;
+  font-weight: 100;
+  margin: 0 10px;
 }
-.descarga-btn {  
-  padding: 5px 20px;  
+
+.descarga-btn {
+  padding: 5px 20px;
   background-color: var(--color-naranja-dark);
   color: var(--color-blanco);
   text-decoration: none;
-  border-radius: 5px;    
+  border-radius: 5px;
 }
+
 .descarga-btn:hover {
   background-color: var(--color-naranja);
 }
+
 hr {
   color: var(--color-gris);
+}
+
+.imagen-menu {
+  padding: 5px;
+  background: #1e1e1e;
+  aspect-ratio: 1/1;
+  margin-bottom: 10px;
 }
 
 /*-------------------------------------------------------------------
@@ -368,23 +417,25 @@ hr {
   padding-top: 50px;
   background: var(--gradiente)
 }
-.slider{
+
+.slider {
   z-index: 9999;
   position: relative;
   width: 100%;
   height: 420px;
   overflow: hidden;
-  
+
 }
-.slider-item{
-  object-fit: cover; 
+
+.slider-item {
+  object-fit: cover;
   position: absolute;
   width: 270px;
   height: 400px;
   text-align: justify;
-  background:#ffffffcc;
+  background: #ffffffcc;
   box-shadow: 0px 1px 15px 1px var(--color-negro);
-  
+
   border-radius: 20px;
   padding: 10px;
   transition: 0.5s;
@@ -398,6 +449,7 @@ hr {
   width: 100%;
   height: auto;
 }
+
 .card-content {
   padding: 15px;
   text-align: center;
@@ -415,7 +467,9 @@ hr {
   font-weight: 400;
 
 }
-#next, #prev{
+
+#next,
+#prev {
   position: absolute;
   top: 40%;
   color: var(--color-blanco);
@@ -427,47 +481,57 @@ hr {
   left: 400px;
   cursor: pointer;
 }
-#next{
+
+#next {
   left: unset;
   right: 400px;
 }
+
 /* Ajustes del slider para pantallas pequeñas */
 @media (max-width: 768px) {
   .slider {
-      height: 420px;
+    height: 420px;
   }
 
   .slider-item {
-      width: 220px;
-      height: 400px;
-      left: calc(50% - 110px); /* Centrar los items */
+    width: 220px;
+    height: 400px;
+    left: calc(50% - 110px);
+    /* Centrar los items */
   }
 
-  #next, #prev {
-      display: none; /* Ocultar los botones de navegación en pantallas pequeñas */
+  #next,
+  #prev {
+    display: none;
+    /* Ocultar los botones de navegación en pantallas pequeñas */
   }
 }
 
 /* Ajustes para pantallas móviles */
 @media (max-width: 480px) {
   .slider {
-      height: 235px;
+    height: 235px;
   }
 
   .slider-item {
-      width: 180px;
-      height: auto;
-      left: calc(50% - 90px); /* Centrar los items */
+    width: 180px;
+    height: auto;
+    left: calc(50% - 90px);
+    /* Centrar los items */
   }
-  .slider-item p {display: none}
+
+  .slider-item p {
+    display: none
+  }
 }
+
 /*-------------------------------------------------------------------
                         Estilos para el pueblo
 ---------------------------------------------------------------------*/
-.notas iframe{
+.notas iframe {
   width: 40%;
   height: 224px;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 
@@ -481,7 +545,8 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  gap: 20px; /* Espacio entre el formulario y el mapa */
+  gap: 20px;
+  /* Espacio entre el formulario y el mapa */
   align-items: start;
   margin-top: 20px;
 }
@@ -498,10 +563,11 @@ hr {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   font-weight: 400;
 }
+
 /* El iframe del mapa ocupa la segunda columna */
 .formulario iframe {
   grid-area: 1 / 2 / 2 / 3;
-  outline:2px solid var(--color-naranja-dark) ;
+  outline: 2px solid var(--color-naranja-dark);
   padding: 20px;
   width: 100%;
   height: 400px;
@@ -599,7 +665,7 @@ hr {
   border-radius: 50%;
   width: 150px;
   outline: 5px solid var(--color-blanco);
-  padding:5px ;
+  padding: 5px;
   margin-bottom: 20px;
 }
 
@@ -610,12 +676,13 @@ hr {
   font-size: 1.3rem;
   font-weight: 200;
   color: var(----color-negro);
-  
+
 }
 
 .contacto p {
   font-weight: 400;
 }
+
 .contacto .redes-sociales ul {
   list-style: none;
   display: flex;
@@ -642,16 +709,18 @@ hr {
 .contacto .fuentes a {
   color: var(--color-naranja-light);
 }
+
 /*-------------------------------------------------------------------
                 Estilos para inicializar el diseño
 ---------------------------------------------------------------------*/
 
-section .contenedor{
+section .contenedor {
   padding: 20px 0px;
 }
-section .titulo{
-  font-size: 1.7rem; 
-  font-weight: 100;   
+
+section .titulo {
+  font-size: 1.7rem;
+  font-weight: 100;
   width: 100%;
   text-align: center;
   padding: 10px 0;
@@ -672,73 +741,90 @@ section .titulo{
 ------------------------------------------------------*/
 @media (max-width: 1440px) {
 
-  .banner .info h1{
+  .banner .info h1 {
     font-size: 4.5rem;
   }
+
   .conocenos .container-section {
-    grid-template-columns: 50% 50%; /* Imagen y primer párrafo en columnas iguales */
+    grid-template-columns: 50% 50%;
+    /* Imagen y primer párrafo en columnas iguales */
     grid-template-rows: auto;
     padding: 30px 50px;
   }
 
-   .conocenos .container-section .image { 
-    grid-area: 1 / 1 / 2 / 2; /* La imagen ocupa la primera columna */
+  .conocenos .container-section .image {
+    grid-area: 1 / 1 / 2 / 2;
+    /* La imagen ocupa la primera columna */
   }
 
-   .conocenos .container-section .texto-1 { 
-    grid-area: 1 / 2 / 2 / 3; /* Primer párrafo al lado de la imagen */
+  .conocenos .container-section .texto-1 {
+    grid-area: 1 / 2 / 2 / 3;
+    /* Primer párrafo al lado de la imagen */
   }
 
-   .conocenos .container-section .texto-2,
-   .conocenos .container-section .texto-3 {
-    grid-column: 1 / -1; /* Los demás párrafos se apilan debajo de la imagen */
+  .conocenos .container-section .texto-2,
+  .conocenos .container-section .texto-3 {
+    grid-column: 1 / -1;
+    /* Los demás párrafos se apilan debajo de la imagen */
   }
-.contenedor-carta{
-  grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
+
+  .contenedor-carta {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .columna1 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .columna2 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .columna3 {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  .columna4 {
+    grid-area: 2 / 3 / 3 / 5;
+  }
 }
 
-.columna1 { grid-area: 2 / 1 / 3 / 3; }
-.columna2 { grid-area: 1 / 1 / 2 / 3; }
-.columna3 { grid-area: 1 / 3 / 2 / 5; }
-.columna4 { grid-area: 2 / 3 / 3 / 5; }
-}
 /*-----------------------------------------------------
       Estilos responsivos para pantallas laptop 
 ------------------------------------------------------*/
 @media (max-width: 1024px) {
-  
- 
+
   /* Información textual dentro del banner */
-  .banner .info {  
+  .banner .info {
     z-index: 2;
     text-align: center;
     position: relative;
-    color: var(--color-negro);   
+    color: var(--color-negro);
   }
-  
+
   .banner .info h1 {
     font-size: 3rem;
   }
-  
+
   .banner .info p {
-    font-size: 1rem;  
+    font-size: 1rem;
     /* margin: 0 auto; */
   }
 
-
-
-
-   .conocenos .container-section {
-    grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
+  .conocenos .container-section {
+    grid-template-columns: 1fr;
+    /* Una sola columna (todo apilado verticalmente) */
     grid-template-rows: auto;
     padding: 20px;
   }
 
-  .conocenos  .container-section .image { 
-    grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
-    max-width: 100%; /* Asegura que la imagen nunca exceda el ancho de su contenedor */
-    display: grid;  
+  .conocenos .container-section .image {
+    grid-area: 1 / 1 / 2 / 2;
+    /* Imagen arriba */
+    max-width: 100%;
+    /* Asegura que la imagen nunca exceda el ancho de su contenedor */
+    display: grid;
     place-items: center;
     width: 100%;
     height: auto;
@@ -747,202 +833,250 @@ grid-template-rows: repeat(2, 1fr);
   /* .container-section img {
   } */
 
-  .conocenos  .container-section .texto-1,
-  .conocenos  .container-section .texto-2,
-  .conocenos  .container-section .texto-3 { 
-    grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
+  .conocenos .container-section .texto-1,
+  .conocenos .container-section .texto-2,
+  .conocenos .container-section .texto-3 {
+    grid-area: auto;
+    /* Todos los párrafos se apilan debajo de la imagen */
   }
+
   .formulario .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);}
-.formulario form {
-  grid-area: 1 / 1 / 2 / 2;}
+    grid-template-rows: repeat(2, 1fr);
+  }
 
-.formulario iframe {
-    height: 300px; /* Reducir altura en pantallas pequeñas */
-    grid-area: 2 / 1 / 3 / 2;}
+  .formulario form {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .formulario iframe {
+    height: 300px;
+    /* Reducir altura en pantallas pequeñas */
+    grid-area: 2 / 1 / 3 / 2;
+  }
 }
+
 /*-----------------------------------------------------
       Estilos responsivos para pantallas tablets
 ------------------------------------------------------*/
 @media(max-width: 768px) {
-  body{
+  body {
     margin-left: 0;
   }
 
-    /* Ajustes para el botón del menú */
+  /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
-    left: 20px; /* Posición del botón del menú */
+    left: 20px;
+    /* Posición del botón del menú */
     display: flex;
   }
 
-  #btn:checked ~ .menu-btn {
-    left: 280px;/* Posición del botón cuando el menú está abierto */
+  #btn:checked~.menu-btn {
+    left: 280px;
+    /* Posición del botón cuando el menú está abierto */
   }
-   /* Icono del menú: barra */
+
+  /* Icono del menú: barra */
   .wrapper .menu-btn i.fa-bars {
-    opacity: 1;/* Visible cuando el menú está cerrado */
+    opacity: 1;
+    /* Visible cuando el menú está cerrado */
   }
 
   /* Icono del menú: cruz */
   .wrapper .menu-btn i.fa-times {
-    opacity: 0; /* Invisible cuando el menú está cerrado */
+    opacity: 0;
+    /* Invisible cuando el menú está cerrado */
   }
 
-    /* Cambios en los iconos cuando el menú se abre */
+  /* Cambios en los iconos cuando el menú se abre */
 
-  #btn:checked ~ .menu-btn i.fa-times {
-    opacity: 1;/* Visible cuando el menú está abierto */
+  #btn:checked~.menu-btn i.fa-times {
+    opacity: 1;
+    /* Visible cuando el menú está abierto */
     transform: rotate(-180deg);
   }
 
-  #btn:checked ~ .menu-btn i.fa-bars {
-    opacity: 0;/* Invisible cuando el menú está abierto */
+  #btn:checked~.menu-btn i.fa-bars {
+    opacity: 0;
+    /* Invisible cuando el menú está abierto */
     transform: rotate(180deg);
   }
+
   /* Estilo del sidebar */
   #sidebar {
     width: 300px;
     left: -300px;
   }
+
   /* Sidebar visible cuando el menú está abierto */
-  #btn:checked ~ #sidebar {
+  #btn:checked~#sidebar {
     left: 0;
   }
 
   /* Oculta los botones de deslizamiento en pantallas pequeñas */
   .slider-wrapper .slide-button {
-    display: none !important; 
+    display: none !important;
   }
 
   /* Estilos para la lista de imágenes en el slider */
   .slider-wrapper .image-list {
-    gap: 10px; 
-    margin-bottom: 15px; 
-    scroll-snap-type: x mandatory; 
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
   }
 
   /* Estilos para cada elemento de imagen dentro de la lista */
   .slider-wrapper .image-list .image-item {
-    width: 280px; 
-    height: 380px; /
+    width: 280px;
+    height: 380px;/
   }
 
   /* Estilos para el pulgar de la barra de desplazamiento */
   .slider-scrollbar .scrollbar-thumb {
-    width: 20%; 
-}
+    width: 20%;
+  }
 
-/*--------------------banner---------------*/
+  /*--------------------banner---------------*/
   .banner {
-    height: 400px; /* Ajustar la altura del banner para pantallas más pequeñas */
+    height: 400px;
+    /* Ajustar la altura del banner para pantallas más pequeñas */
     background-size: cover;
   }
 
- /* Estilo del título en el banner */
- .banner .info h1 {
-  font-size: 4rem;
-  line-height: 1.3;
-}
+  /* Estilo del título en el banner */
+  .banner .info h1 {
+    font-size: 4rem;
+    line-height: 1.3;
+  }
+
   /* Estilo del párrafo en el banner */
-.banner .info p {
-  font-size: 16px;    
-  line-height: 1.1;
-} 
- .conocenos .container-section {
-    grid-template-columns: 1fr; /* Una sola columna (todo apilado verticalmente) */
+  .banner .info p {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .conocenos .container-section {
+    grid-template-columns: 1fr;
+    /* Una sola columna (todo apilado verticalmente) */
     grid-template-rows: auto;
     padding: 20px;
   }
 
-   .conocenos .container-section .image { 
-    grid-area: 1 / 1 / 2 / 2; /* Imagen arriba */
+  .conocenos .container-section .image {
+    grid-area: 1 / 1 / 2 / 2;
+    /* Imagen arriba */
   }
 
-   .conocenos .container-section .texto-1,
-   .conocenos .container-section .texto-2,
-   .conocenos .container-section .texto-3 { 
-    grid-area: auto; /* Todos los párrafos se apilan debajo de la imagen */
+  .conocenos .container-section .texto-1,
+  .conocenos .container-section .texto-2,
+  .conocenos .container-section .texto-3 {
+    grid-area: auto;
+    /* Todos los párrafos se apilan debajo de la imagen */
   }
 
 
 
-  .contenedor-carta{
+  .contenedor-carta {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
-  .columna1 { grid-area: 3 / 1 / 4 / 5; }
-  .columna2 { grid-area: 1 / 1 / 2 / 5; }
-  .columna3 { grid-area: 2 / 1 / 3 / 5; }
-  .columna4 { grid-area: 4 / 1 / 5 / 5; }
-  
-    .contacto {  
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      text-align: center;
-    }
+
+  .columna1 {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  .columna2 {
+    grid-area: 1 / 1 / 2 / 5;
+  }
+
+  .columna3 {
+    grid-area: 2 / 1 / 3 / 5;
+  }
+
+  .columna4 {
+    grid-area: 4 / 1 / 5 / 5;
+  }
+
+  .contacto {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
 }
+
 /*-----------------------------------------------------
            Estilos para pantallas móviles
 ------------------------------------------------------*/
 @media (max-width: 480px) {
   /* Estilos para pantallas móviles */
 
-  body{
+  body {
     margin-left: 0;
   }
+
   .banner img {
     display: none;
   }
-  
+
   /* Estilo del título en el banner */
   .banner .info h1 {
     font-size: 3rem;
     line-height: 1.3;
   }
-    /* Estilo del párrafo en el banner */
+
+  /* Estilo del párrafo en el banner */
   .banner .info p {
-    font-size: 16px;    
+    font-size: 16px;
     line-height: 1.1;
-  } 
+  }
 
   /* Ajustes para el botón del menú */
   .wrapper .menu-btn {
-    left:20px;
+    left: 20px;
     display: flex;
 
   }
+
   /* Icono del menú: barra */
   .wrapper .menu-btn i.fa-bars {
-    opacity: 1;/* Visible cuando el menú está cerrado */
+    opacity: 1;
+    /* Visible cuando el menú está cerrado */
   }
-    /* Icono del menú: cruz */
+
+  /* Icono del menú: cruz */
 
   .wrapper .menu-btn i.fa-times {
-    opacity: 0;/* Invisible cuando el menú está cerrado */
+    opacity: 0;
+    /* Invisible cuando el menú está cerrado */
   }
- /* Cambios en los iconos cuando el menú se abre */
-  #btn:checked ~ .menu-btn i.fa-times {
-    opacity: 1;/* Visible cuando el menú está abierto */
+
+  /* Cambios en los iconos cuando el menú se abre */
+  #btn:checked~.menu-btn i.fa-times {
+    opacity: 1;
+    /* Visible cuando el menú está abierto */
     transform: rotate(-180deg);
   }
-  #btn:checked ~ .menu-btn i.fa-bars {
-    opacity: 0;/* Invisible cuando el menú está abierto */
+
+  #btn:checked~.menu-btn i.fa-bars {
+    opacity: 0;
+    /* Invisible cuando el menú está abierto */
     transform: rotate(180deg);
   }
-    /* Estilo del sidebar */
+
+  /* Estilo del sidebar */
 
   #sidebar {
     width: 100%;
     left: -100%;
   }
-    /* Sidebar visible cuando el menú está abierto */
-  #btn:checked ~ #sidebar {
-    left: 0;
-  }   
 
-  .contacto {  
+  /* Sidebar visible cuando el menú está abierto */
+  #btn:checked~#sidebar {
+    left: 0;
+  }
+
+  .contacto {
     flex-direction: column;
     justify-content: center;
     align-content: center;
