@@ -401,8 +401,7 @@ hr {
 
 .imagen-menu {
   padding: 5px;
-  background: #1e1e1e;
-  aspect-ratio: 1/1;
+  background: var(--gradiente);  
   margin-bottom: 10px;
 }
 
@@ -532,6 +531,11 @@ hr {
   width: 40%;
   height: 224px;
   cursor: pointer;
+  outline: 2px solid var(--color-naranja-dark);
+  padding: 10px;
+}
+.notas {
+  
 }
 
 
@@ -555,8 +559,6 @@ hr {
 .formulario form {
   grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  /* max-width: 800px; */
-  /* margin: 0 auto; */
   padding: 30px;
   background-color: var(--color-blanco);
   border-radius: 8px;
