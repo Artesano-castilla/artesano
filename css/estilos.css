@@ -966,8 +966,21 @@ section .titulo {
     justify-content: center;
     align-content: center;
     text-align: center;
+   
   }
+  .perfil {
+    display: flex;
+    justify-content: center;
+  }
+  .contacto .redes-sociales ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+  }
+  .contacto .datos{
+    margin: 15px 0;
+  }
 
   /*--------estilos slider-----------*/
 
