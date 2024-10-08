@@ -310,11 +310,12 @@ header {
 ---------------------------------------------------------------------*/
 .contenedor-carta {
   display: grid;
-  grid-template-columns: repeat(4, .5fr);
-  grid-template-rows: .5fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: auto;
   gap: 20px;
   margin: 20px;
   position: relative;
+    align-items: stretch;
 }
 
 .carta {
@@ -485,16 +486,53 @@ hr {
 }
 
 /*-------------------------------------------------------------------
-                        Estilos para el pueblo
+                        Estilos para la historia                        
 ---------------------------------------------------------------------*/
-.historia .contenedor {
-  margin: 0 20px;
-  font-family: 200;
+
+.parrafos-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 50px;
+  /* Añade espacio entre los párrafos */
 }
 
-.historia p{
-  margin: 20px 0;
+.parrafo {
+  display: flex;
+  /* align-items: center; */
+  gap: 20px;
+}
 
+.parrafo img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.parrafo p {
+  flex: 1;
+  /* Asegura que el texto ocupe el resto del espacio */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .parrafo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .parrafo img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .parrafo p {
+    text-align: justify;
+  }
 }
 
 /*-------------------------------------------------------------------
@@ -960,19 +998,22 @@ section .titulo {
     justify-content: center;
     align-content: center;
     text-align: center;
-   
+
   }
+
   .perfil {
     display: flex;
     justify-content: center;
   }
+
   .contacto .redes-sociales ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
   }
-  .contacto .datos{
+
+  .contacto .datos {
     margin: 15px 0;
   }
 
@@ -1099,6 +1140,7 @@ section .titulo {
     margin: 0 30px;
     max-width: 400px;
   }
+
   .slider-item>div:first-child {
     display: block;
     align-items: flex-start;
