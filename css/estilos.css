@@ -9,6 +9,7 @@
   --gradiente: linear-gradient(to bottom, #1e1e1e 0%, #5a5f54 100%);
   --color-blanco: #f4f4f4;
   --color-negro: #1e1e1e;
+  --color-gris: #737571;
   --box-shadow: 0 8px 8px rgba(0, 0, 0, 0.8);
   --borde-texto: 5px solid var(--color-naranja-dark);
 }
@@ -392,8 +393,8 @@ header {
   background-color: var(--color-naranja);
 }
 
-hr {
-  color: var(--color-gris);
+.columnas ul li {
+  border-bottom: 1.8px solid var(--color-gris)
 }
 
 .imagen-menu {
