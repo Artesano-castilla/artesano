@@ -831,6 +831,30 @@ section .titulo {
 }
 
 @media (min-width:992px) and (max-width: 1199px) {
+  .conocenos .container-section {
+    grid-template-columns: 1fr;
+    /* Una sola columna (todo apilado verticalmente) */
+    grid-template-rows: auto;
+    padding: 20px;
+  }
+
+  .conocenos .container-section .imagen {
+    grid-area: 1 / 1 / 2 / 2;
+    /* Imagen arriba */
+  }
+
+  .contenedor-carta {
+    grid-template-columns: repeat(4, .5fr);
+    grid-template-rows: repeat(2, .5fr);
+  }
+
+  .conocenos .container-section .texto-1,
+  .conocenos .container-section .texto-2,
+  .conocenos .container-section .texto-3 {
+    grid-area: auto;
+    /* Todos los párrafos se apilan debajo de la imagen */
+  }
+
   .contenedor-carta {
     grid-template-columns: repeat(4, .5fr);
     grid-template-rows: repeat(2, .5fr);
@@ -904,6 +928,9 @@ section .titulo {
       Estilos responsivos para pantallas tablet 
 ------------------------------------------------------*/
 @media (min-width:768px) and (max-width: 991px) {
+  body {
+    margin-left: 0;
+  }
 
   /* Información textual dentro del banner */
   .banner .info {
@@ -930,9 +957,7 @@ section .titulo {
 
   .conocenos .container-section .imagen {
     grid-area: 1 / 1 / 2 / 2;
-    /* Imagen arriba */
     max-width: 100%;
-    /* Asegura que la imagen nunca exceda el ancho de su contenedor */
     display: grid;
     place-items: center;
     width: 100%;
@@ -947,6 +972,25 @@ section .titulo {
   .conocenos .container-section .texto-3 {
     grid-area: auto;
     /* Todos los párrafos se apilan debajo de la imagen */
+  }
+  .contenedor-carta {
+    grid-template-columns: repeat(4, .5fr);
+    grid-template-rows: repeat(2, .5fr);
+  }
+  .columna3 {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .columna1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .columna2 {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  .columna4 {
+    grid-area: 2 / 3 / 3 / 5;
   }
 
   /*historia*/
@@ -981,6 +1025,55 @@ section .titulo {
     height: 300px;
     /* Reducir altura en pantallas pequeñas */
     grid-area: 2 / 1 / 3 / 2;
+  }
+
+  /* Ajustes para el botón del menú */
+  .wrapper .menu-btn {
+    left: 20px;
+    /* Posición del botón del menú */
+    display: flex;
+  }
+
+  #btn:checked~.menu-btn {
+    left: 280px;
+    /* Posición del botón cuando el menú está abierto */
+  }
+
+  /* Icono del menú: barra */
+  .wrapper .menu-btn i.fa-bars {
+    opacity: 1;
+    /* Visible cuando el menú está cerrado */
+  }
+
+  /* Icono del menú: cruz */
+  .wrapper .menu-btn i.fa-times {
+    opacity: 0;
+    /* Invisible cuando el menú está cerrado */
+  }
+
+  /* Cambios en los iconos cuando el menú se abre */
+
+  #btn:checked~.menu-btn i.fa-times {
+    opacity: 1;
+    /* Visible cuando el menú está abierto */
+    transform: rotate(-180deg);
+  }
+
+  #btn:checked~.menu-btn i.fa-bars {
+    opacity: 0;
+    /* Invisible cuando el menú está abierto */
+    transform: rotate(180deg);
+  }
+
+  /* Estilo del sidebar */
+  #sidebar {
+    width: 240px;
+    left: -240px;
+  }
+
+  /* Sidebar visible cuando el menú está abierto */
+  #btn:checked~#sidebar {
+    left: 0;
   }
 }
 
@@ -1032,8 +1125,8 @@ section .titulo {
 
   /* Estilo del sidebar */
   #sidebar {
-    width: 300px;
-    left: -300px;
+    width: 240px;
+    left: -240px;
   }
 
   /* Sidebar visible cuando el menú está abierto */
@@ -1041,28 +1134,6 @@ section .titulo {
     left: 0;
   }
 
-  /* Oculta los botones de deslizamiento en pantallas pequeñas */
-  .slider-wrapper .slide-button {
-    display: none !important;
-  }
-
-  /* Estilos para la lista de imágenes en el slider */
-  .slider-wrapper .image-list {
-    gap: 10px;
-    margin-bottom: 15px;
-    scroll-snap-type: x mandatory;
-  }
-
-  /* Estilos para cada elemento de imagen dentro de la lista */
-  .slider-wrapper .image-list .image-item {
-    width: 280px;
-    height: 380px;/
-  }
-
-  /* Estilos para el pulgar de la barra de desplazamiento */
-  .slider-scrollbar .scrollbar-thumb {
-    width: 20%;
-  }
 
   /*--------------------banner---------------*/
   .banner {
@@ -1099,14 +1170,13 @@ section .titulo {
   .conocenos .container-section .texto-2,
   .conocenos .container-section .texto-3 {
     grid-area: auto;
-    /* Todos los párrafos se apilan debajo de la imagen */
   }
 
 
 
   .contenedor-carta {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: .5fr;
+    grid-template-rows: repeat(4, .5fr);
   }
 
 
@@ -1394,11 +1464,14 @@ section .titulo {
     grid-area: 2 / 1 / 3 / 2;
   }
 
-  .contacto {
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-  }
+  .parrafo img {
+    max-width: 300px;
 
-}
+    .contacto {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+
+  }
