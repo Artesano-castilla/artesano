@@ -23,7 +23,7 @@
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
-  outline: solid 1px red;
+  /* outline: solid 1px red; */
 }
 
 /* Asegura que las imágenes y elementos multimedia no excedan el tamaño de su contenedor */
