@@ -29,10 +29,8 @@
 
 /* Asegura que las imágenes y elementos multimedia no excedan el tamaño de su contenedor */
 img,
-picture,
-video,
-svg,
-canvas {
+video
+ {
   max-width: 100%;
   display: block;
 }
@@ -40,18 +38,15 @@ canvas {
 /* Hereda la fuente del contenedor padre para estos elementos interactivos */
 input,
 button,
-textarea,
-select {
+textarea
+ {
   font: inherit;
 }
 
 /* Ajusta el interlineado y controla el desbordamiento en títulos */
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3{
   line-height: 1.2;
   overflow-wrap: break-word;
   font-family: "Platypi", serif;
@@ -67,7 +62,6 @@ body {
   line-height: 1.5;
   background-color: var(--color-blanco);
   margin-left: 240px;
-  /*margina el cuerpo desde la izquierda */
   font-weight: 300;
 }
 
@@ -143,7 +137,6 @@ body {
   overflow: hidden;
   left: 0;
   transition: all 0.9s ease;
-  /* display: none; */
 }
 
 /* Ocultar el sidebar cuando el menú está cerrado */
@@ -262,7 +255,6 @@ header {
 .conocenos .container-section {
   display: grid;
   grid-template-columns: 40% 60%;
-  /* Imagen 40%, texto 60% en pantallas grandes */
   grid-template-rows: auto;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
@@ -276,6 +268,8 @@ header {
   align-items: center;
   width: 100%;
   height: auto;
+  padding: 10px;
+  
 }
 
 .conocenos .container-section .imagen img {
@@ -283,25 +277,23 @@ header {
   height: auto;
   box-shadow: var(--box-shadow);
   object-fit: contain;
-
 }
 
 .conocenos .container-section .texto-1 {
   grid-area: 1 / 2 / 2 / 3;
   /* Primer párrafo al lado de la imagen */
-  text-align: justify;
+
 }
 
 .conocenos .container-section .texto-2 {
   grid-area: 2 / 2 / 3 / 3;
   /* Segundo párrafo debajo del primero */
-  text-align: justify;
 }
 
 .conocenos .container-section .texto-3 {
   grid-area: 3 / 2 / 4 / 3;
   /* Tercer párrafo */
-  text-align: justify;
+
 }
 
 
@@ -477,13 +469,13 @@ header {
   border: none;
   padding: 10px;
   background-color: transparent;
-  left: 400px;
+  left: 18%;
   cursor: pointer;
 }
 
 #next {
   left: unset;
-  right: 400px;
+  right: 20%;
 }
 
 /*-------------------------------------------------------------------
@@ -503,6 +495,7 @@ header {
 .parrafo {
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .div1 {
@@ -516,6 +509,7 @@ header {
   grid-area: 2 / 1 / 3 / 3;
   flex-direction: row-reverse;
   gap: 20px;
+  text-align: right;
 }
 
 .div3 {
@@ -537,6 +531,7 @@ header {
   grid-area: 5 / 1 / 6 / 3;
   flex-direction: row-reverse;
   gap: 20px;
+  text-align: right;
 }
 
 .parrafo img {
@@ -553,11 +548,15 @@ header {
 }
 
 .parrafo video {
-  border-radius: 25px;
-  outline: var(--color-naranja-dark);
+  border-radius: 25px;  
+  box-shadow: var(--box-shadow);
 }
 
-
+@media (max-width:1200px) {
+  .parrafo p {
+    text-align: center;
+  }
+}
 /*-------------------------------------------------------------------
                               Estilos para formulario
 ---------------------------------------------------------------------*/
@@ -972,7 +971,6 @@ section .titulo {
   .conocenos .container-section .texto-2,
   .conocenos .container-section .texto-3 {
     grid-area: auto;
-    /* Todos los párrafos se apilan debajo de la imagen */
   }
 
   .contenedor-carta {
@@ -1260,10 +1258,8 @@ section .titulo {
 
   .slider {
     width: 100%;
-    height: 400px;
-
+    height: 260px;
   }
-
 
   .slider-item {
     left: calc(50% -110px);
@@ -1386,10 +1382,11 @@ section .titulo {
   /*------estilos slider-------*/
   .slider {
     width: 100%;
-    height: 420px;
+    height: 320px;
   }
 
   .slider-item {
+    
     left: 0;
     /* margin:0 10px; */
     top: 0;
@@ -1398,12 +1395,18 @@ section .titulo {
   }
 
   .slider-item>div:first-child {
-    display: block;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;    
+    text-align: center;
+    align-items: center;
     color: var(--color-blanco);
     font-weight: 400;
   }
-
+  #next,
+  #prev {
+    display: none;
+  }
+ 
   .relative {
     top: 40px;
     left: 0;
